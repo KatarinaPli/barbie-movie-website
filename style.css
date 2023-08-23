@@ -1,5 +1,5 @@
 :root {
-  --background-color: #F4F1BB;
+  --background-color: #faeef9;
   --first-accent-color: #F52EC0;
    --addition-accent-color: #F896D8;
   --second-accent-color: #6874E8;
@@ -13,20 +13,130 @@
     margin: 0;
     padding: 0;
 }
+
+
 .background-image {
     background-image: url(/img/margot-robbie.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 height: 100vh;
 }
+.background-image .wave{
+position: absolute;
+width: 100%;
+bottom: 0;
+}
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--accent-font);
+  color: var(--background-color);
+} 
 .nav-branding{
-    font-size: 25px;
-    border: 1 solid var(--accent-color);
+    font-size: 17px;
+    border: 2px solid var( --first-accent-color);
+    border-radius: 30px;
+    padding: 8px 12px;
+    color: var(--background-color);
+  text-decoration: none;
+  display: none;
+}
+.nav-menu{ 
+
+  display: flex;
+  justify-content:flex-start;
+  align-content:flex-start;
+  gap: 20px;
+}
+.nav-link {
+   
+  transition: 0.5s ease;
+color: var(--background-color);
+  font-size: 23px;
+  font-weight: 400;
+}
+.nav-link:hover {
+  color: var(--second-accent-color);
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 4px auto; 
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--first-accent-color);
+}
+.navbar {
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ padding: 0 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(37, 37, 37, 0.169),
+    rgba(30, 30, 30, 0.084)
+  );
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.nav-branding {
+  font-size: 22px;
+  display: none;
 }
 
 
+.description-section{
+    padding: 100px;
+}
 
 
-@media  (max-width: 780px) {
-    
+@media  (max-width: 768px) {
+.hamburger {
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  .nav-menu {
+    position: fixed;
+right: 0%;
+    top: -100%;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--addition-accent-color);
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+      justify-content:center;
+  align-content:center;
+  gap: 20px;
+
+  }
+  .nav-item {
+    margin: 13px 0;
+  }
+  .nav-menu.active {
+    top: 0;
+    left: 0;
+  }
+  .nav-branding {
+    display: block;
+  }
 }
