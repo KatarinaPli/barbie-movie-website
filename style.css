@@ -57,6 +57,7 @@ a {
 color: var(--background-color);
   font-size: 23px;
   font-weight: 400;
+  padding-top: 10px;
 }
 .nav-link:hover {
   color: var(--second-accent-color);
@@ -98,7 +99,15 @@ color: var(--background-color);
 .description-section{
     padding: 100px;
 }
+.watch-btn-md-scr{
+ font-size: 17px;
+    border: 2px solid var( --first-accent-color);
+    border-radius: 30px;
+    padding: 8px 12px;
+    color: var(--background-color);
+  text-decoration: none;
 
+}
 
 @media  (max-width: 768px) {
 .hamburger {
@@ -116,21 +125,21 @@ color: var(--background-color);
   .nav-menu {
     position: fixed;
 right: 0%;
-    top: -100%;
-    gap: 0;
+    top: -1000%;
+   
     flex-direction: column;
-    background-color: var(--addition-accent-color);
+    background-color: var(--background-color);
     width: 100%;
     text-align: center;
     transition: all 0.3s ease-in-out;
     display: flex;
       justify-content:center;
   align-content:center;
-  gap: 20px;
+  gap: 4px;
 
   }
   .nav-item {
-    margin: 13px 0;
+    margin: 10px 0;
   }
   .nav-menu.active {
     top: 0;
@@ -138,5 +147,8 @@ right: 0%;
   }
   .nav-branding {
     display: block;
+  }
+  .nav-link{
+    color: var(--addition-accent-color)
   }
 }
