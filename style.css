@@ -13,7 +13,6 @@
     margin: 0;
     padding: 0;
      box-sizing: border-box;
-     overflow-x: hidden;
 }
 
 
@@ -100,9 +99,7 @@ color: var(--background-color);
 }
 
 
-.description-section{
-    padding: 100px;
-}
+
 .watch-btn-md-scr{
  font-size: 17px;
     border: 2px solid var( --first-accent-color);
@@ -136,9 +133,9 @@ color: var(--background-color);
   }
   .nav-menu {
     position: fixed;
-right: 0%;
+
     top: -1000%;
-   
+   right: 0%;
     flex-direction: column;
     background-color: var(--background-color);
     width: 100%;
@@ -172,5 +169,12 @@ right: 0%;
   .wave{display: none;}
   .barbie-logo{
     font-size: 150px;
+
+  
   }
+body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 }
