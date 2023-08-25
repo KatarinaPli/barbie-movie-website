@@ -12,6 +12,8 @@
 *{
     margin: 0;
     padding: 0;
+     box-sizing: border-box;
+     overflow-x: hidden;
 }
 
 
@@ -159,15 +161,12 @@ right: 0%;
     display: block;
   }
   .nav-link{
-    color: var(--addition-accent-color)
+    color: var(--addition-accent-color);
   }
   .background-image{
         background-image: url(/img/margot-robbie-responsive.jpg);
     background-size: contain;
-  
-
-
-  
+    max-width: 100%;
 
   }
   .wave{display: none;}
