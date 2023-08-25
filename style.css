@@ -20,6 +20,8 @@
     background-size: cover;
     background-repeat: no-repeat;
 height: 100vh;
+
+  
 }
 .background-image .wave{
 position: absolute;
@@ -108,6 +110,14 @@ color: var(--background-color);
   text-decoration: none;
 
 }
+.barbie-logo{
+  position: absolute;
+  font-family: var(--accent-font);
+  color: var(--background-color);
+  top: 14%;
+  left: 5%;
+  font-size: 280px;
+}
 
 @media  (max-width: 768px) {
 .hamburger {
@@ -150,5 +160,18 @@ right: 0%;
   }
   .nav-link{
     color: var(--addition-accent-color)
+  }
+  .background-image{
+        background-image: url(/img/margot-robbie-responsive.jpg);
+    background-size: contain;
+  
+
+
+  
+
+  }
+  .wave{display: none;}
+  .barbie-logo{
+    font-size: 150px;
   }
 }
